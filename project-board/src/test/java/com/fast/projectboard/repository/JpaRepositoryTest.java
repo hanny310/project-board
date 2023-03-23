@@ -29,43 +29,43 @@ class JpaRepositoryTest {
         this.articleRepository = articleRepository;
         this.articleCommentRepository = articleCommentRepository;
     }
-@DisplayName("select 테스트")
+
+    @DisplayName("select 테스트")
     @Test
-    void givenTestData_whenSelecting_thenWorksFine(){
+    void givenTestData_whenSelecting_thenWorksFine() {
         //Given
 
         //When
-    List<Article> articles = articleRepository.findAll();
-    assertThat(articles)
-            .isNotNull()
-            .hasSize(123);
+        List<Article> articles = articleRepository.findAll();
 
 
         //Then
+        assertThat(articles)
+                .isNotNull()
+                .hasSize(123);
 
     }
 
     @DisplayName("insert 테스트")
     @Test
-    void givenTestData_whenInserting_thenWorksFine(){
+    void givenTestData_whenInserting_thenWorksFine() {
         //Given
         long previousCount = articleRepository.count();
         Article article = Article.of("new article", "new content", "#spring");
 
         //When
-      Article sacedArticle = articleRepository.save(article);
+        Article sacedArticle = articleRepository.save(article);
 
 
         //Then
-        assertThat(articleRepository.count()).isEqualTo(previousCount +1);
-
+        assertThat(articleRepository.count()).isEqualTo(previousCount + 1);
 
 
     }
 
     @DisplayName("update 테스트")
     @Test
-    void givenTestData_whenUpdating_thenWorksFine(){
+    void givenTestData_whenUpdating_thenWorksFine() {
         //Given
         Article article = articleRepository.findById(1L).orElseThrow();
         String updatedHashtag = "#springboot";
@@ -77,14 +77,14 @@ class JpaRepositoryTest {
 
 
         //Then
-        assertThat(savedArticle).hasFieldOrPropertyWithValue("hashtag",updatedHashtag);
-
+        assertThat(savedArticle).hasFieldOrPropertyWithValue("hashtag", updatedHashtag);
 
 
     }
+
     @DisplayName("delete 테스트")
     @Test
-    void givenTestData_whenDeleting_thenWorksFine(){
+    void givenTestData_whenDeleting_thenWorksFine() {
         //Given
         Article article = articleRepository.findById(1L).orElseThrow();
         long previousArticleCount = articleRepository.count();
@@ -92,7 +92,7 @@ class JpaRepositoryTest {
         int deletedCommentsSize = article.getArticleComments().size();
 
         //When
-       articleRepository.delete(article);
+        articleRepository.delete(article);
 
         //Then
         assertThat(articleRepository.count()).isEqualTo(previousArticleCount - 1);
