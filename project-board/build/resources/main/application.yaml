@@ -22,10 +22,14 @@
         hibernate.default_batch_fetch_size: 100
     sql.init.mode: always
     h2.console.enabled: false
+    data:
+      rest:
+        base-path: /api
+        detection-strategy: annotated
 
 
 
----
+
 
 #  spring:
 #    config.activate.on-profile: testdb
