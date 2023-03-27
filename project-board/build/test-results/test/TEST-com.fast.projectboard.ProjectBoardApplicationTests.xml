@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.fast.projectboard.ProjectBoardApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-03-23T07:47:40" hostname="DESKTOP-IRLJETI" time="0.146">
+<testsuite name="com.fast.projectboard.ProjectBoardApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-03-27T01:50:36" hostname="DESKTOP-IRLJETI" time="0.15">
   <properties/>
-  <testcase name="contextLoads()" classname="com.fast.projectboard.ProjectBoardApplicationTests" time="0.146"/>
-  <system-out><![CDATA[16:47:35.978 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [ProjectBoardApplicationTests]: using SpringBootContextLoader
-16:47:35.982 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.fast.projectboard.ProjectBoardApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
-16:47:35.982 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.fast.projectboard.ProjectBoardApplicationTests]: ProjectBoardApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-16:47:36.000 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using ContextCustomizers for test class [ProjectBoardApplicationTests]: [DisableObservabilityContextCustomizer, PropertyMappingContextCustomizer, Customizer, ExcludeFilterContextCustomizer, DuplicateJsonObjectContextCustomizer, MockitoContextCustomizer, TestRestTemplateContextCustomizer]
-16:47:36.050 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [C:\Users\rhw\Documents\Git-personal\project-board\build\classes\java\main\com\fast\projectboard\ProjectBoardApplication.class]
-16:47:36.051 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.fast.projectboard.ProjectBoardApplication for test class com.fast.projectboard.ProjectBoardApplicationTests
-16:47:36.131 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners for test class [ProjectBoardApplicationTests]: [ServletTestExecutionListener, DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, MockitoTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, TransactionalTestExecutionListener, SqlScriptsTestExecutionListener, EventPublishingTestExecutionListener, RestDocsTestExecutionListener, MockRestServiceServerResetTestExecutionListener, MockMvcPrintOnlyOnFailureTestExecutionListener, WebDriverTestExecutionListener, MockWebServiceServerTestExecutionListener, ResetMocksTestExecutionListener]
-16:47:36.132 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: class [ProjectBoardApplicationTests], class annotated with @DirtiesContext [false] with mode [null]
+  <testcase name="contextLoads()" classname="com.fast.projectboard.ProjectBoardApplicationTests" time="0.15"/>
+  <system-out><![CDATA[10:50:31.667 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [ProjectBoardApplicationTests]: using SpringBootContextLoader
+10:50:31.671 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.fast.projectboard.ProjectBoardApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+10:50:31.672 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.fast.projectboard.ProjectBoardApplicationTests]: ProjectBoardApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+10:50:31.692 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using ContextCustomizers for test class [ProjectBoardApplicationTests]: [DisableObservabilityContextCustomizer, PropertyMappingContextCustomizer, Customizer, ExcludeFilterContextCustomizer, DuplicateJsonObjectContextCustomizer, MockitoContextCustomizer, TestRestTemplateContextCustomizer]
+10:50:31.743 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [C:\Users\rhw\Documents\Git-personal\project-board\build\classes\java\main\com\fast\projectboard\ProjectBoardApplication.class]
+10:50:31.744 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.fast.projectboard.ProjectBoardApplication for test class com.fast.projectboard.ProjectBoardApplicationTests
+10:50:31.834 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners for test class [ProjectBoardApplicationTests]: [ServletTestExecutionListener, DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, MockitoTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, TransactionalTestExecutionListener, SqlScriptsTestExecutionListener, EventPublishingTestExecutionListener, RestDocsTestExecutionListener, MockRestServiceServerResetTestExecutionListener, MockMvcPrintOnlyOnFailureTestExecutionListener, WebDriverTestExecutionListener, MockWebServiceServerTestExecutionListener, ResetMocksTestExecutionListener]
+10:50:31.835 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: class [ProjectBoardApplicationTests], class annotated with @DirtiesContext [false] with mode [null]
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -19,17 +19,17 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.0.4)
 
-2023-03-23T16:47:36.388+09:00  INFO 25112 --- [    Test worker] c.f.p.ProjectBoardApplicationTests       : Starting ProjectBoardApplicationTests using Java 17.0.6 with PID 25112 (started by rhw in C:\Users\rhw\Documents\Git-personal\project-board)
-2023-03-23T16:47:36.389+09:00 DEBUG 25112 --- [    Test worker] c.f.p.ProjectBoardApplicationTests       : Running with Spring Boot v3.0.4, Spring v6.0.6
-2023-03-23T16:47:36.389+09:00  INFO 25112 --- [    Test worker] c.f.p.ProjectBoardApplicationTests       : No active profile set, falling back to 1 default profile: "default"
-2023-03-23T16:47:37.075+09:00  INFO 25112 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-03-23T16:47:37.117+09:00  INFO 25112 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 36 ms. Found 2 JPA repository interfaces.
-2023-03-23T16:47:37.506+09:00  INFO 25112 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-03-23T16:47:37.562+09:00  INFO 25112 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
-2023-03-23T16:47:37.850+09:00  INFO 25112 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-03-23T16:47:38.044+09:00  INFO 25112 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3d3b272a
-2023-03-23T16:47:38.047+09:00  INFO 25112 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-03-23T16:47:38.095+09:00  INFO 25112 --- [    Test worker] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-03-27T10:50:32.099+09:00  INFO 18348 --- [    Test worker] c.f.p.ProjectBoardApplicationTests       : Starting ProjectBoardApplicationTests using Java 17.0.6 with PID 18348 (started by rhw in C:\Users\rhw\Documents\Git-personal\project-board)
+2023-03-27T10:50:32.100+09:00 DEBUG 18348 --- [    Test worker] c.f.p.ProjectBoardApplicationTests       : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-03-27T10:50:32.100+09:00  INFO 18348 --- [    Test worker] c.f.p.ProjectBoardApplicationTests       : No active profile set, falling back to 1 default profile: "default"
+2023-03-27T10:50:32.872+09:00  INFO 18348 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-03-27T10:50:32.922+09:00  INFO 18348 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43 ms. Found 2 JPA repository interfaces.
+2023-03-27T10:50:33.325+09:00  INFO 18348 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-03-27T10:50:33.392+09:00  INFO 18348 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-03-27T10:50:33.699+09:00  INFO 18348 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-03-27T10:50:33.907+09:00  INFO 18348 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4946485c
+2023-03-27T10:50:33.909+09:00  INFO 18348 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-03-27T10:50:33.963+09:00  INFO 18348 --- [    Test worker] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
 Hibernate: 
     
     alter table article_comment 
@@ -79,15 +79,15 @@ Hibernate:
        add constraint FKghmocqkgqs5tkmucf5putw64t 
        foreign key (article_id) 
        references article (id)
-2023-03-23T16:47:38.909+09:00  INFO 25112 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-03-23T16:47:38.917+09:00  INFO 25112 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-03-23T16:47:39.059+09:00  WARN 25112 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-03-23T16:47:39.569+09:00 DEBUG 25112 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2023-03-23T16:47:39.646+09:00 DEBUG 25112 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 mappings in 'requestMappingHandlerMapping'
-2023-03-23T16:47:39.662+09:00 DEBUG 25112 --- [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /api/explorer/**] in 'resourceHandlerMapping'
-2023-03-23T16:47:39.670+09:00 DEBUG 25112 --- [    Test worker] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
-2023-03-23T16:47:40.054+09:00  INFO 25112 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 13 endpoint(s) beneath base path '/actuator'
-2023-03-23T16:47:40.108+09:00  INFO 25112 --- [    Test worker] c.f.p.ProjectBoardApplicationTests       : Started ProjectBoardApplicationTests in 3.948 seconds (process running for 4.752)
+2023-03-27T10:50:34.819+09:00  INFO 18348 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-03-27T10:50:34.829+09:00  INFO 18348 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-03-27T10:50:34.992+09:00  WARN 18348 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-03-27T10:50:35.509+09:00 DEBUG 18348 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-03-27T10:50:35.587+09:00 DEBUG 18348 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 mappings in 'requestMappingHandlerMapping'
+2023-03-27T10:50:35.605+09:00 DEBUG 18348 --- [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /api/explorer/**] in 'resourceHandlerMapping'
+2023-03-27T10:50:35.611+09:00 DEBUG 18348 --- [    Test worker] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-03-27T10:50:35.994+09:00  INFO 18348 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 13 endpoint(s) beneath base path '/actuator'
+2023-03-27T10:50:36.047+09:00  INFO 18348 --- [    Test worker] c.f.p.ProjectBoardApplicationTests       : Started ProjectBoardApplicationTests in 4.178 seconds (process running for 5.105)
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
