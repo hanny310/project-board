@@ -16,7 +16,7 @@ import java.time.LocalDateTime;
 @Getter
 @ToString
 @EntityListeners(AuditingEntityListener.class)
-@MappedSuperclass
+@MappedSuperclass //entity클래스는 entity나 mappedsuperclass로 지정한 클래스만 상속 가능
 public class AuditingFields {
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
     @CreatedDate
