@@ -30,6 +30,7 @@ dependencies {
 	compileOnly 'org.projectlombok:lombok'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	annotationProcessor 'org.projectlombok:lombok'
+	annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor' //사용자가 만든 config IDE가 인식해서 도와줄수 있도록함
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
 	// queryDSL 설정
