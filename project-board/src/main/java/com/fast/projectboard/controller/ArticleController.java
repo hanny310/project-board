@@ -16,4 +16,11 @@ public class ArticleController {
         map.addAttribute("articles", List.of());
         return "articles/index";
     }
+
+    @GetMapping("/{articleId}")
+    public String article(ModelMap map){
+        map.addAttribute("article", null);
+        map.addAttribute("articleComments", List.of());
+        return "articles/detail";
+    }
 }
