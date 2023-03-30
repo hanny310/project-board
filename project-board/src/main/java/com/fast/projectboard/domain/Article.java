@@ -37,7 +37,6 @@ public class Article extends AuditingFields  {
 
 
 
-
     protected Article() {
     }
 

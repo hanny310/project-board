@@ -38,7 +38,6 @@ class JpaRepositoryTest {
         //When
         List<Article> articles = articleRepository.findAll();
 
-
         //Then
         assertThat(articles)
                 .isNotNull()
