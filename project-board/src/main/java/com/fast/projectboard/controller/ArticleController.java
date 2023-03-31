@@ -24,4 +24,6 @@ public class ArticleController {
         map.addAttribute("articleComments", List.of());
         return "articles/detail";
     }
+
+
 }
