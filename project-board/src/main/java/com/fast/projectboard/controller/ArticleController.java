@@ -1,5 +1,6 @@
 package com.fast.projectboard.controller;
 
+import com.fast.projectboard.domain.constant.FormStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,6 +24,13 @@ public class ArticleController {
         map.addAttribute("article", "article");
         map.addAttribute("articleComments", List.of());
         return "articles/detail";
+    }
+
+    @GetMapping("/form")
+    public String articleForm(ModelMap map) {
+        map.addAttribute("formStatus", FormStatus.CREATE);
+
+        return "articles/form";
     }
 
 

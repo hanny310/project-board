@@ -2,13 +2,12 @@ package com.fast.projectboard.repository;
 
 import com.fast.projectboard.config.JpaConfig;
 import com.fast.projectboard.domain.Article;
+import com.fast.projectboard.domain.UserAccount;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.context.annotation.Import;
-
-
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.*;
@@ -21,19 +20,22 @@ class JpaRepositoryTest {
 
     private final ArticleRepository articleRepository;
     private final ArticleCommentRepository articleCommentRepository;
+    private final UserAccountRepository userAccountRepository;
 
     public JpaRepositoryTest(
             @Autowired ArticleRepository articleRepository,
-            @Autowired ArticleCommentRepository articleCommentRepository
-    ) {
+            @Autowired ArticleCommentRepository articleCommentRepository,
+            @Autowired UserAccountRepository userAccountRepository) {
         this.articleRepository = articleRepository;
         this.articleCommentRepository = articleCommentRepository;
+        this.userAccountRepository = userAccountRepository;
     }
 
     @DisplayName("select 테스트")
     @Test
     void givenTestData_whenSelecting_thenWorksFine() {
         //Given
+
 
         //When
         List<Article> articles = articleRepository.findAll();
@@ -48,12 +50,13 @@ class JpaRepositoryTest {
     @DisplayName("insert 테스트")
     @Test
     void givenTestData_whenInserting_thenWorksFine() {
-        //Given
+        // Given
         long previousCount = articleRepository.count();
-        Article article = Article.of("new article", "new content", "#spring");
+        UserAccount userAccount = userAccountRepository.save(UserAccount.of("uno", "pw", null, null, null));
+        Article article = Article.of(userAccount, "new article", "new content", "#spring");
 
         //When
-        Article sacedArticle = articleRepository.save(article);
+        articleRepository.save(article);
 
 
         //Then
