@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
 import org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver;
 
 @Configuration
-public class ThymeleafConfig { //decoupled logic 사용하기 위해 사용자가 만드는 config로 decoupled logic은 
+public class ThymeleafConfig { //decoupled logic 사용하기 위해 사용자가 만드는 config
 
     @Bean
     public SpringResourceTemplateResolver thymeleafTemplateResolver(
@@ -20,7 +20,6 @@ public class ThymeleafConfig { //decoupled logic 사용하기 위해 사용자�
 
         return defaultTemplateResolver;
     }
-
 
     @RequiredArgsConstructor
     @Getter
@@ -34,4 +33,5 @@ public class ThymeleafConfig { //decoupled logic 사용하기 위해 사용자�
     }
 
 }
+
 

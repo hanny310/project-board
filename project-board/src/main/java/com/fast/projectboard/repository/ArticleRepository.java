@@ -2,6 +2,7 @@ package com.fast.projectboard.repository;
 
 import com.fast.projectboard.domain.Article;
 import com.fast.projectboard.domain.QArticle;
+import com.fast.projectboard.repository.querydsl.ArticleRepositoryCustom;
 import com.querydsl.core.types.dsl.DateTimeExpression;
 import com.querydsl.core.types.dsl.StringExpression;
 import org.springframework.data.domain.Page;
@@ -15,10 +16,18 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 @RepositoryRestResource //SpringDataJPA를 사용해 만든 repository형태로 controller없이 내부적으로 Rest API가 만들어진다
 public interface ArticleRepository extends
         JpaRepository<Article, Long>,
+        ArticleRepositoryCustom,
         QuerydslPredicateExecutor<Article>, //해당 엔티티 안에 있는 모든 필드에 대한 기본 검색 기능 추가(대소문자 구분x,전체 입력값 검색)
         QuerydslBinderCustomizer<QArticle>{
 
     Page<Article> findByTitle(String title, Pageable pageable);
+    Page<Article> findByTitleContaining(String title, Pageable pageable);
+    Page<Article> findByContentContaining(String content, Pageable pageable);
+    Page<Article> findByUserAccount_UserIdContaining(String userId, Pageable pageable);
+    Page<Article> findByUserAccount_NicknameContaining(String nickname, Pageable pageable);
+    Page<Article> findByHashtag(String hashtag, Pageable pageable);
+    void deleteByIdAndUserAccount_UserId(Long articleId, String userid);
+
     @Override
     default void customize(QuerydslBindings bindings, QArticle root){ //customize 메소드를 오버라이드하여 새부 검색 기능 재정의
         bindings.excludeUnlistedProperties(true); //true로 설정하면 list하지 않은 필드는 검색에서 제외
